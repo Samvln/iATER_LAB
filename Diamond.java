@@ -1,10 +1,10 @@
 package iATER;
 
+import java.util.Scanner;
+
 public class Diamond {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int num = 6;
+	static void my_method(int num) {
 
 		for (int i = 1; i <= num; i++) {
 			for (int j = num; j > i; j--) {
@@ -15,7 +15,7 @@ public class Diamond {
 			}
 			System.out.println("");
 		}
-		for (int i = num; i > 0; i--) {
+		for (int i = num - 1; i > 0; i--) {
 			for (int j = i; j < num; j++) {
 				System.out.print(" ");
 			}
@@ -24,6 +24,18 @@ public class Diamond {
 			}
 			System.out.println("");
 		}
+	}
+
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the number:");
+		int number = scanner.nextInt();
+
+		my_method(number);
+
 	}
 
 }
